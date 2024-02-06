@@ -1,0 +1,137 @@
+﻿@using KQRegistrationWeb.ViewModels
+@model RejectPageVm
+<div class="reject-container">
+    <div class="row reject-page-instructions">
+        <span>
+            الرجاء ادخال امكانيتين لتسجيل ابنك/ابنتك وسيتم فحص الطلب وابلاغكم بقرار الجهة المسؤولة.
+        </span>
+    </div>
+    <div class="reject-form-container">
+        <form id="reject-form" method="post" asp-action="PostReject" role="form">
+            <div class="validation-errors-container alert alert-danger vd_hidden"></div>
+            <input type="hidden" value="@Model.Student.IDN" name="rejectData.StudentIDN" />
+            <input type="hidden" value="@Model.Student.BirthDate.ToString("yyyy-MM-dd")" name="rejectData.StudentBirthDate" />
+            <input type="hidden" value="@Model.Student.Year" name="rejectData.Year" /> 
+            <input type="hidden" value="@Model.Student.RegistrationTypeId" name="rejectData.Registration_Type" />
+            <div>
+                @* <div class="back-btn-div">
+                    <a class="back-btn loading-shower" data-check-validation="false"
+                       asp-controller="Registration"
+                       asp-action="Register"
+                       asp-route-studentIDN="@Model.Student.IDN"
+                       asp-route-studentBirthDate="@Model.Student.BirthDate.ToString("yyyy-MM-dd")"
+                       asp-route-year="@Model.Student.Year">
+                        <img src="~/images/back-btn.png"
+                             alt="الرجوع الى صفحة التسجيل"
+                             title="الرجوع الى صفحة التسجيل" />
+                    </a>
+                </div> *@
+                <div class="row">
+                    <div class="row first-priority">
+                        <label for="school1_list" class="form-label">افضلية اولى:</label>
+                        <div class="school1">
+                            <select id="school1_list"
+                                    name="rejectData.SelectedSchoolId1"
+                                    class="form-select"
+                                    aria-label="اختيار مدرسه"
+                                    required min="0">
+                                <option value="-1">اختيار المدرسه</option>
+                                @foreach (var school in Model.Schools)
+                                {
+                                    <option value="@school.Id">@school.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="teacher1">
+                            <select id="teacher1_list"
+                                    name="rejectData.SelectedTeacherId1"
+                                    class="form-select"
+                                    aria-label="اختيار المعلمه"
+                                    required min="0">
+                                <option data-school-id="-1" value="-1">اختيار المعلمه</option>
+                                @foreach (var teacher in Model.Teachers)
+                                {
+                                    <option data-school-id="@teacher.MithamId" value="@teacher.TeacherId">@teacher.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row second-priority">
+                        <label for="school2_list" class="form-label">افضلية ثانية:</label>
+                        <div class="school2">
+                            <select id="school2_list"
+                                    name="rejectData.SelectedSchoolId2"
+                                    class="form-select"
+                                    aria-label="اختيار مدرسه"
+                                    required min="0">
+                                <option value="-1">اختيار المدرسه</option>
+                                @foreach (var school in Model.Schools)
+                                {
+                                    <option value="@school.Id">@school.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="teacher2">
+                            <select id="teacher2_list"
+                                    name="rejectData.SelectedTeacherId2"
+                                    class="form-select"
+                                    aria-label="اختيار المعلمه" required min="0">
+                                <option data-school-id="-1" value="-1">اختيار المعلمه</option>
+                                @foreach (var teacher in Model.Teachers)
+                                {
+                                    <option data-school-id="@teacher.MithamId" value="@teacher.TeacherId">@teacher.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row notes">
+                        <label for="reason" class="reason-label form-label">اسباب الرفض:</label>
+                        <textarea class="form-control"
+                                  id="reason"
+                                  rows="3" maxlength="255"
+                                  name="rejectData.Reason" required ></textarea>
+                    </div>
+                    <div class="centered mt-20 mr-30 ml-30">
+                        <input type="submit" class="btn btn-primary loading-shower" value="שליחה / ارسال" />                                                
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="student-details">
+        <div class="row">
+            <div class="student-data">
+                <img src="~/images/kq-student-icon.png" />
+                <span class="form-label">שם תלמיד</span>
+                <span id="student-name" class="form-label data-label">@Model.Student.Name</span>
+            </div>
+            <div class="student-data">
+                <img src="~/images/kq-date-icon.png" />
+                <span class="form-label">תאריך לידה</span>
+                <span id="student-birthdate" class="form-label data-label">@Model.Student.BirthDate.ToString("dd/MM/yyyy")</span>
+            </div>
+            <div class="student-data">
+                <img src="~/images/kq-phone-icon.png" />
+                <span class="form-label">טלפון הורים</span>
+                <span id="student-telephone" class="form-label data-label">@Model.Student.Telephone</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="student-data">
+                <img src="~/images/kq-identity-icon.png" />
+                <span class="form-label">תעודת זהות</span>
+                <span id="student-idn" class="form-label data-label">@Model.Student.IDN</span>
+            </div>
+            <div class="student-data">
+                <img src="~/images/kq-school-icon.png" />
+                <span class="form-label">בית ספר</span>
+                <span id="student-school" class="form-label data-label">@Model.Student.SchoolName</span>
+            </div>
+            <div class="student-data">
+                <img src="~/images/kq-teacher-icon.png" />
+                <span class="form-label">מורה</span>
+                <span id="student-teacher" class="form-label data-label">@Model.Student.TeacherName</span>
+            </div>
+        </div>
+    </div>
+</div>

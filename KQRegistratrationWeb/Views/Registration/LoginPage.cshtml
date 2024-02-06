@@ -1,0 +1,86 @@
+﻿@using KQRegistrationWeb.Models
+@model SearchData
+@* <span class="vd_alert-icon">
+        <i class="fa fa-exclamation-circle vd_red"></i>
+        </span>  *@
+<form id="login-form" method="post" asp-action="PostLogin" role="form">
+    <div class="validation-errors-container alert alert-danger vd_hidden"></div>
+    @if (Model != null && !string.IsNullOrEmpty(Model.ErrorSearchMessage))
+    {
+        <div class="text-danger error-search-message">
+            @Model.ErrorSearchMessage
+            <a class="error-search-message-btn" href="tel:*3595">
+                <img src="~/images/kq-telefon-btn.png" />
+            </a>
+            <a class="error-search-message-btn" href="https://wa.me/972502201681" target="_blank">
+                <img src="~/images/kq-whatsapp-btn.png" />
+            </a>
+        </div>
+    }
+    <input type="hidden" asp-for="Year" name="Year" />
+    <input type="hidden" asp-for="RegistrationTypeId" name="RegistrationTypeId" />
+
+    <div asp-validation-summary="All" class="row registration text-danger"></div>
+    <div class="row">
+        <div class="col-3 reg-kid-right">
+            <img src="/images/kq-kidsboy.png" height="110" />
+        </div>
+        <div class="col-6">
+            <div class="idn col-4">
+                <label for="student-id" class="form-label">תעודת זהות / رقم هوية الطالب</label>
+                <input asp-for="StudentIDN" id="student-id" name="StudentIDN" type="number"
+                       class="form-control" aria-required="true" 
+                       required minLength="9" maxlength="9" />
+                <span asp-validation-for="StudentIDN"></span>
+            </div>
+            <div class="birth-date col-4">
+                <label for="student-birth-date" class="form-label">תאריך לידה / تاريخ الميلاد الطالب</label>
+                <input asp-for="StudentBirthDate" type="date" 
+                       name="StudentBirthDate" id="student-birth-date"
+                       asp-format="{0:yyyy-MM-dd}"                       
+                       class="form-control" aria-required="true" required />
+                <span asp-validation-for="StudentBirthDate"></span>
+            </div>
+        </div>
+        <div class="col-3 reg-kid-left">
+            <img src="/images/kq-kidsgirl.png" height="110" />
+        </div>
+    </div>
+    <div class="centered mt-20">
+        <button type="submit"
+                class="btn btn-primary loading-shower"
+                value="חיפוש / اضغط للبحث">
+            <span class="visually-shown">חיפוש / اضغط للبحث</span>
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
+</form>
+
+<script>
+    var reject_form = $('#login-form');
+    var error_roles_form = $('.validation-errors-container', reject_form);
+     
+    jQuery.validator.setDefaults({
+        debug: false,// set to true to avoid form submit
+        success: "valid"
+    });
+    $("#login-form").validate({
+        errorLabelContainer: error_roles_form,//shows one validation error message for all the validation messages
+        //onkeyup: false,
+        onclick: false,
+        onfocusout: false,
+        errorPlacement: function (error, element) {/*prevent errors for each element */ },
+        rules: {
+            "StudentIDN": { required: true, min: 0 },
+            "StudentBirthDate": { required: true }
+        },
+        messages: {
+            "StudentIDN": {
+                required: "الرجاء ادخال رقم الهويه.",    
+                minlength: "الرجاء ادخال رقم الهويه من {0} خانات.",
+                maxlength: "الرجاء ادخال رقم الهويه من {0} خانات."
+            },
+            "StudentBirthDate": "الرجاء ادخال تاريخ ميلاد صحيح."
+        }
+     });
+</script>

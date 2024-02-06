@@ -1,0 +1,28 @@
+﻿@using KQGeneral.Models.Registration
+@model List<RegistrationType>
+<form id="start-form" method="post" asp-action="Start" role="form">
+    <div class="row start-page">
+        <div class="col-4">
+            <label for="reg-type-select" class="data-label mb-10">اختيار نوع التسجيل:</label>
+            <select name="startData.RegistrationTypeId" id="reg-type-select"
+                    class="form-select form-select-lg mb-3" 
+                    aria-label=".form-select-lg example">
+               @*  <option value="1" selected>بساتين/גנים</option> *@
+                @foreach (var rt in Model)
+                {
+                    <option value="@rt.Id">@rt.ViewName</option>
+                }
+            </select>
+        </div>      
+    </div>
+    @if (Model != null && Model.Count() > 0)
+    {
+        <div class="centered mt-20">
+            <button type="submit"
+                    class="btn btn-primary loading-shower"
+                    value="שליחה / ارسال">
+                שליחה / ارسال
+            </button>
+        </div>
+    }
+</form>

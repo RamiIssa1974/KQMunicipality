@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kfar Qassem Registration Site</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/css/site.css?ver=4" rel="stylesheet" />
+    <base href="/" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validate/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">    
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script type="text/javascript"  src="~/js/rejectpage.js?Ver=4"></script>
+    <script type="text/javascript" src="~/js/main.js?Ver=4"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QVY7EJEK3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-0QVY7EJEK3');
+    </script>
+</head>
+@{
+    ViewBag.PageTitle = "نافذة تسجيل الطلاب";
+}
+<body dir="rtl">
+
+    <div class="loading-container hidden">
+        <img src="~/images/loading.gif?v=2" />
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="row m-10 main-header">
+                <div class="col first-col">
+                    <img src="~/images/kfarkasemlogo.png" />
+                </div>
+                <div class="col second-col centered">
+                    <h1>
+                        <a class="home-page-link" asp-controller="Registration" asp-action="Start">@ViewBag.PageTitle</a>
+                    </h1>
+                </div>
+                <div class="col third-col lefted">
+                    <img src="~/images/kq-education.png" />
+                </div>
+            </div>
+            <hr />
+        </header>
+        <br />
+        <div class="loading-overlay hidden"></div>
+        @RenderBody()
+        @RenderSection("Scripts", required: false)
+    </div>
+</body>
+</html>

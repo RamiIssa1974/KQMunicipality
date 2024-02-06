@@ -1,0 +1,92 @@
+﻿@using KQRegistrationWeb.ViewModels
+@model RegisterPageVm
+
+<div class="row reg-details-kid">
+    <div class="col-2">
+        <img src="/images/kq-kidsboy.png" height="110" />
+    </div>
+    <div class="col-4 mt-30">
+        <label class="data-label">תעודת זהות / رقم هوية الطالب:</label>
+        <label class="data-label-info">@Model.Student.Name</label>
+    </div>
+    <div class="col-4 mt-30">
+        <label class="data-label">תאריך לידה / تاريخ الميلاد الطالب:</label>
+        <label class="data-label-info">@Model.Student.BirthDate.ToString("yyyy-MM-dd")</label>
+    </div>
+    <div class="col-2">
+        <img src="/images/kq-kidsgirl.png" height="110" />
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-5">
+        <div class="row m-20 reg-details">
+            <div class="m-10">
+                <img src="/images/kq-school-icon.png" width="40" />
+                <label class="data-label">בית ספר / المدرسه:</label>
+                <label class="data-label-info">@Model.Student.SchoolName</label>
+            </div>
+            <div class="m-10 reg-details-left">
+                <img src="/images/kq-teacher-icon.png" width="40" />
+                <label class="data-label">מנהלת / االمعلمه:</label>
+                <label class="data-label-info">@Model.Student.TeacherName</label>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 reg-details-left">
+        <form id="account" method="post" asp-action="ParentSelect" role="form">
+            <input type="hidden" value="@Model.Student.Year" name="Student.Year" />
+            <input type="hidden" value="@Model.Student.IDN" name="Student.IDN" />
+            <input type="hidden" value="@Model.Student.BirthDate" name="Student.BirthDate" />
+            <input type="hidden" value="@Model.Student.RegistrationTypeId" name="Student.RegistrationTypeId" />
+            <div>
+                <fieldset>
+                    <div>
+                        <div class="form-switch">
+                            <input class="form-check-input" type="radio" id="huey" name="RegistrationData.SuggestionAcceptance" value="accept" checked />
+                            <label class="form-check-label mr-40" for="huey">اوافق على التسجيل المقترح</label>
+                        </div>
+                        <div>
+                            <fieldset class="mr-20">
+                                <label class="data-label mt-10">اختيار المعلمه:</label>
+                               @*  <div class="mr-20">
+                                    <input class="form-check-input" type="radio" id="@Model.Student.TeacherId" name="RegistrationData.TeacherId" value="@Model.Student.TeacherId" checked />
+                                    <label class="form-check-label" for="@Model.Student.TeacherId">@Model.Student.TeacherName</label>
+                                </div> *@
+                                @{
+                                    var counter = 1; 
+                                }
+                                @foreach (var teacher in Model.Teachers.Where(t => t.TeacherId != Model.Student.TeacherId))
+                                {
+                                    <div class="mr-20">
+                                        <input class="form-check-input" type="radio" id="@teacher.TeacherId" name="RegistrationData.TeacherId"
+                                               value="@teacher.TeacherId"
+                                        @(teacher.MaximumCapacity <= teacher.NumberOfRegisteredStudents ? "disabled" : "")
+                                        @(counter++ == 1 ? "checked" : "") />
+                                        <label class="form-check-label" for="@teacher.TeacherId">@teacher.Name @(teacher.MaximumCapacity <= teacher.NumberOfRegisteredStudents ? " (صف ممتلئ)" : "")</label>
+                                    </div>
+                                }
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class=" form-switch">
+                        <input class="form-check-input" type="radio" id="dewey" name="RegistrationData.SuggestionAcceptance" value="deny" />
+                        <label class="form-check-label mr-40" for="dewey">غير موافق, اريد اختيار مدرسه اخرى</label>
+                    </div>
+                </fieldset>
+                <div class="row centered mt-20 mr-40 ml-30" >
+                    <button type="submit"
+                            class="btn btn-primary loading-shower"
+                            value="שליחה / ارسال">
+                        שליחה / ارسال                        
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+

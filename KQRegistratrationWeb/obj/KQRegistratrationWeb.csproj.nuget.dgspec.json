@@ -1,0 +1,131 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Personal\\Rami\\Projects\\KQ_Municipality\\KQRegistratrationWeb\\KQRegistratrationWeb.csproj": {}
+  },
+  "projects": {
+    "C:\\Personal\\Rami\\Projects\\KQ_Municipality\\KQGeneral\\KQGeneral.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Personal\\Rami\\Projects\\KQ_Municipality\\KQGeneral\\KQGeneral.csproj",
+        "projectName": "KQGeneral",
+        "projectPath": "C:\\Personal\\Rami\\Projects\\KQ_Municipality\\KQGeneral\\KQGeneral.csproj",
+        "packagesPath": "C:\\Users\\Rami Issa\\.nuget\\packages\\",
+        "outputPath": "C:\\Personal\\Rami\\Projects\\KQ_Municipality\\KQGeneral\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Rami Issa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Personal\\Rami\\Projects\\KQ_Municipality\\KQRegistratrationWeb\\KQRegistratrationWeb.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Personal\\Rami\\Projects\\KQ_Municipality\\KQRegistratrationWeb\\KQRegistratrationWeb.csproj",
+        "projectName": "KQRegistratrationWeb",
+        "projectPath": "C:\\Personal\\Rami\\Projects\\KQ_Municipality\\KQRegistratrationWeb\\KQRegistratrationWeb.csproj",
+        "packagesPath": "C:\\Users\\Rami Issa\\.nuget\\packages\\",
+        "outputPath": "C:\\Personal\\Rami\\Projects\\KQ_Municipality\\KQRegistratrationWeb\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Rami Issa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Personal\\Rami\\Projects\\KQ_Municipality\\KQGeneral\\KQGeneral.csproj": {
+                "projectPath": "C:\\Personal\\Rami\\Projects\\KQ_Municipality\\KQGeneral\\KQGeneral.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
