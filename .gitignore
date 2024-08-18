@@ -21,6 +21,7 @@ AngularClientApp/dist/
 KQRegistration/bin/
 KQRegistration/obj/
 KQRegistration/appsettings.json
+KQRegistration/production.json
 #KQRegistration/appsettings.Development.json
 KQGeneral/bin/
 KQGeneral/obj/
