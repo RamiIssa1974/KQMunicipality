@@ -11,17 +11,15 @@ packages/
 *.zip
 
 # dependencies
-AngularClientApp/.angular/
-AngularClientApp/.vscode/
-AngularClientApp/node_modules/
-AngularClientApp/src/assets/
-AngularClientApp/.angular/cache/
-AngularClientApp/dist/
-
+KQRegistratrationWeb/.vs/
+KQRegistratrationWeb/bin/
+KQRegistratrationWeb/obj/
+ 
+KQRegistration/.vs/
 KQRegistration/bin/
 KQRegistration/obj/
 KQRegistration/appsettings.json
-KQRegistration/production.json
+KQRegistration/appsettings.production.json
 #KQRegistration/appsettings.Development.json
 KQGeneral/bin/
 KQGeneral/obj/
