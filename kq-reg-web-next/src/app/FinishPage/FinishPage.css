@@ -1,0 +1,57 @@
+﻿.finish-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    direction: rtl;
+}
+
+.finish-success-box {
+    width: 300px; /* Width of the box */
+    border: 2px solid green;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Top section - message */
+.finish-message-section {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.finish-message-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.finish-message-date {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Bottom section - icon */
+.finish-icon-section {
+    background-color: #9bd315; /* Bright green */
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ccc;
+}
+
+.finish-checkmark-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+}

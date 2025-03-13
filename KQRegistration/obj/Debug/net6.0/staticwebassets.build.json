@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "Ul/XBUEdCKFSUapbO1H3pbstg/dXi4oDg6i1CNQf2bo=",
+  "Hash": "lIvVnTf60wDhJ5w1Hn5R4I5OJT0wA9Rw/sZdX8nLcMU=",
   "Source": "KQApi",
   "BasePath": "_content/KQApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

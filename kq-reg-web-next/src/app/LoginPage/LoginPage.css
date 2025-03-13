@@ -1,0 +1,102 @@
+﻿.login-page-container {
+    text-align: center;
+    padding: 20px;
+    direction: rtl;
+}
+
+/* Error Message */
+.login-error-message-container {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    direction: rtl;
+    text-align: right;
+    width: 100%;
+}
+
+.login-error-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-error-search-message-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Header */
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Main content container */
+.login-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Images */
+.login-image {
+    height: 100px;
+}
+
+.login-image-left {
+    margin-left: 20px;
+}
+
+.login-image-right {
+    margin-right: 20px;
+}
+
+/* Form container */
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    width: 400px;
+    direction: rtl;
+    text-align: right;
+}
+
+/* Input wrappers */
+.login-input-wrapper {
+    width: 100%;
+}
+
+    .login-input-wrapper label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .login-input-wrapper input {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+/* IDN error */
+.login-idn-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Search button */
+.login-search-button {
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}

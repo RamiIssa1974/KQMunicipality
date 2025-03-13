@@ -109,8 +109,17 @@ namespace KQApi.Services
                 && ((int)st.IDNo).ToString() == studentIDN
                 && st.Birthdate.Date == birthDate.Date
                 );
-            var student = _mapper.Map<Student>(sqlStudents);
-            return student;
+            try
+            {
+                var student = _mapper.Map<Student>(sqlStudents);
+                return student;
+            }
+            catch(Exception ex)
+            {
+                Console.Write(ex.ToString());
+            }
+            
+            return null;
              
             //var shortStudentData = sharePointAllStdentsList
             //                .StudentsRecords
@@ -179,7 +188,7 @@ namespace KQApi.Services
                     if (request.SecondAlternativeTeacher != null) studentToUpdate.AltTeacher2 = request.SecondAlternativeTeacher;
 
                     if (request.reshoum_hetsonee_bdekaa != null) studentToUpdate.reshoum_hetsonee_bdekaa = request.reshoum_hetsonee_bdekaa;
-                    studentToUpdate.Confirm = null;
+                    studentToUpdate.Confirm = "";
                     // Save the changes to the database
                     await _context.SaveChangesAsync();
                 }

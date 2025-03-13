@@ -62,10 +62,18 @@ namespace KQApi.Controllers
         [HttpPost("students")]
         public async Task<ActionResult<Student>> Students()
         {
-            StudentRequest request = await Request.ReadFromJsonAsync<StudentRequest>();
+            try
+            {
+                StudentRequest request = await Request.ReadFromJsonAsync<StudentRequest>();
 
-            var updatedStudent = await _basateenRepo.UpdateStudentAsync(request);
-            return Ok(updatedStudent);
+                var updatedStudent = await _basateenRepo.UpdateStudentAsync(request);
+                return Ok(updatedStudent);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An unexpected error occurred.", error = ex.Message });
+            }
+                        
         }
 
         [HttpGet("RegistrationTypes")]

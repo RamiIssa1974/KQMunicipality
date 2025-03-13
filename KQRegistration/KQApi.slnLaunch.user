@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "KQApi.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\KQRegistratrationWeb\\KQRegistrationWeb.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

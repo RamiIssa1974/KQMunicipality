@@ -1,0 +1,106 @@
+﻿/* Base container for the page */
+.register-page-container {
+    direction: rtl;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header Section */
+.header-info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-image {
+    height: 100px;
+}
+
+.header-text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-line {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Main Section */
+.main-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* ✅ Responsive support */
+}
+
+/* School & Manager Section */
+.school-manager-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.school-manager-item {
+    padding: 10px;
+    min-width: 250px;
+    text-align: right;
+}
+
+    .school-manager-item img {
+        height: 50px;
+        margin-bottom: -20px;
+    }
+
+    .school-manager-item span {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+/* Separator */
+.separator {
+    min-width: 1px;
+    background-color: black;
+    border: 1px solid black;
+    min-height: 100px;
+    margin-top: 10px;
+}
+
+/* Agreement Section */
+.agreement-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.radio-option {
+    font-size: 16px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Submit Button */
+.register-submit-button {
+    margin-top: 30px;
+}
+
+    .register-submit-button button {
+        background-color: #0070f3;
+        color: white;
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+        .register-submit-button button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }

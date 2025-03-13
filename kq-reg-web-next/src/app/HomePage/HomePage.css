@@ -1,0 +1,49 @@
+﻿/* Main container */
+.home-container {
+    text-align: center;
+    padding: 20px;
+    direction: rtl;
+}
+
+    /* Header */
+    .home-container h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Label for dropdown */
+    .home-container label {
+        font-size: 18px;
+        margin-bottom: 10px;
+        display: block;
+        text-align: right;
+    }
+
+/* Dropdown and button container */
+.home-select-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items to the right */
+    gap: 20px;
+}
+
+/* Dropdown */
+.home-dropdown {
+    padding: 10px;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+/* Submit Button */
+.home-submit-button {
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+    .home-submit-button.disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }

@@ -11,6 +11,23 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontends", policy =>
+    {
+        policy.WithOrigins(
+            "http://localhost:3000",           // Local Next.js dev server
+            "http://creativehandsco.com" // Your deployed site
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+    });
+});
+
+
+
+
+
 builder.Host.UseSerilog();
 // Add services to the container.
 
@@ -37,6 +54,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
  
 
 var app = builder.Build();
+app.UseCors("AllowFrontends");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

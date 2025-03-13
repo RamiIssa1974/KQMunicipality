@@ -9,3 +9,15 @@ C:\Personal\Rami\Projects\KQ_Municipality\KQGeneral\obj\Debug\net6.0\KQGeneral.d
 C:\Personal\Rami\Projects\KQ_Municipality\KQGeneral\obj\Debug\net6.0\refint\KQGeneral.dll
 C:\Personal\Rami\Projects\KQ_Municipality\KQGeneral\obj\Debug\net6.0\KQGeneral.pdb
 C:\Personal\Rami\Projects\KQ_Municipality\KQGeneral\obj\Debug\net6.0\ref\KQGeneral.dll
+C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQGeneral\bin\Debug\net6.0\KQGeneral.deps.json
+C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQGeneral\bin\Debug\net6.0\KQGeneral.dll
+C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQGeneral\bin\Debug\net6.0\KQGeneral.pdb
+C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQGeneral\obj\Debug\net6.0\KQGeneral.GeneratedMSBuildEditorConfig.editorconfig
+C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQGeneral\obj\Debug\net6.0\KQGeneral.AssemblyInfoInputs.cache
+C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQGeneral\obj\Debug\net6.0\KQGeneral.AssemblyInfo.cs
+C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQGeneral\obj\Debug\net6.0\KQGeneral.csproj.CoreCompileInputs.cache
+C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQGeneral\obj\Debug\net6.0\KQGeneral.sourcelink.json
+C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQGeneral\obj\Debug\net6.0\KQGeneral.dll
+C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQGeneral\obj\Debug\net6.0\refint\KQGeneral.dll
+C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQGeneral\obj\Debug\net6.0\KQGeneral.pdb
+C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQGeneral\obj\Debug\net6.0\ref\KQGeneral.dll

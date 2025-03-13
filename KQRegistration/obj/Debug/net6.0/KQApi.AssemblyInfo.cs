@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KQApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0a5a45ee88b165dba404193de2ea4040e3e1a8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("KQApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KQApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
