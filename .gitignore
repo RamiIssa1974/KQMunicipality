@@ -20,7 +20,7 @@ KQRegistration/bin/
 KQRegistration/obj/
 KQRegistration/appsettings.json
 KQRegistration/appsettings.production.json
-#KQRegistration/appsettings.Development.json
+KQRegistration/appsettings.Development.json
 KQGeneral/bin/
 KQGeneral/obj/
 # IDEs and editors
