@@ -20,7 +20,7 @@ KQRegistration/bin/
 KQRegistration/obj/
 KQRegistration/appsettings.json
 KQRegistration/appsettings.production.json
-#KQRegistration/appsettings.Development.json
+KQRegistration/appsettings.Development.json
 KQRegistration/appsettings.Local.json
 KQGeneral/bin/
 KQGeneral/obj/
@@ -49,3 +49,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+/KQRegistration/appsettings.Development.json
