@@ -235,3 +235,4 @@ C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQRegistration\obj\Debug\net6
 C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQRegistration\obj\Debug\net6.0\KQApi.pdb
 C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQRegistration\obj\Debug\net6.0\KQApi.genruntimeconfig.cache
 C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQRegistration\obj\Debug\net6.0\ref\KQApi.dll
+C:\Personal\Rami\Projects\KQ_Municipality\Projects\KQRegistration\bin\Debug\net6.0\appsettings.Local.json

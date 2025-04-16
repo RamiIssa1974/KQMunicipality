@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KQRegistrationWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0a5a45ee88b165dba404193de2ea4040e3e1a8a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d4088b646028138be18ab604e3fd38523c25fbc")]
 [assembly: System.Reflection.AssemblyProductAttribute("KQRegistrationWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KQRegistrationWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
