@@ -1,29 +1,81 @@
-## 🏫 School Registration System (React + .NET Core + Microsoft Graph API)
+# KQ Municipality – School Registration System
 
-**🔧 Tech Stack:**  
-.NET Core Web API, React, SQL Server, Microsoft Graph API, JWT Authentication, Entity Framework Core
+A production-grade student registration platform used by educational institutions in Israel. The solution includes ASP.NET Core APIs, an ASP.NET MVC site, and a modern Next.js app with RTL support, all backed by SQL Server. Docker is supported for reproducible builds and deployments (Windows containers for Windows Server 2019; Linux containers for dev/CI).
 
-**📌 Project Type:**  
-Freelance project for educational institutions in Israel
+---
 
-**🎯 Overview:**  
-This system was developed to allow schools to register students and manage their data in an efficient and secure way. It includes a full user management layer, integration with Microsoft services, and multi-language support (including RTL).
+## Tech Stack
 
-**👨‍💻 Key Features:**
-- Secure user registration and login using JWT
-- Microsoft Graph API integration for syncing users with Office365 accounts
-- Dynamic registration forms with field validation
-- Admin dashboard to manage users and export data
-- Fully responsive design with RTL (Hebrew/Arabic) support
-- Real-time data validation and feedback using React state management
+- **Backend:** ASP.NET Core Web API, Entity Framework Core, JWT Authentication
+- **Web (MVC):** ASP.NET MVC 5
+- **Web (Modern):** Next.js (React) – `kq-reg-web-next`
+- **Database:** Microsoft SQL Server
+- **Integrations:** Microsoft Graph API
+- **Containerization:** Docker (Windows containers on Server 2019; Linux containers for dev/CI)
 
-**💡 My Role:**
-- Developed the backend with .NET Core REST APIs and SQL Server
-- Built the React frontend including the full registration flow
-- Integrated Microsoft Graph API for account management and permissions
-- Handled security: hashed passwords, role-based authorization
-- Deployed the solution on Windows Server and performed end-to-end QA
+---
 
+## Overview
+
+This system enables schools to register students and manage data securely and efficiently. It provides user management, integration with Microsoft services, and multi-language UI with full RTL support.
+
+---
+
+## Repository Structure (Main Apps)
+
+- `kqapi` — ASP.NET Core Web API (Auth, business logic, EF Core)
+- `kqwebmvc` — ASP.NET MVC 5 site
+- `kq-reg-web-next` — Next.js (React) registration portal
+- `kqsql` — SQL Server database (runs as a normal Windows service in production)
+
+> Either frontend (MVC or Next.js) can be used; both talk to `kqapi`.
+
+---
+
+## Key Features
+
+- Secure registration and login (JWT), role-based authorization
+- Microsoft Graph API integration (Office 365 user sync, permissions)
+- Dynamic registration forms with validation
+- Admin dashboard for user management and export
+- Responsive UI with RTL (Hebrew/Arabic)
+- Dockerized services for reproducible builds and deployments
+
+---
+
+## Docker Support
+
+### Production (Windows Server 2019)
+- `kqapi`, `kqwebmvc`, `kq-reg-web-next` run as **Windows containers**
+- `kqsql` stays as a **native SQL Server service** (recommended/supported)
+- Images are **built outside** the server (dev laptop or CI) and **pushed to a registry** (e.g., ECR/Docker Hub)
+- On the server: `docker pull` and `docker run` only
+
+**Base images (examples):**
+- .NET runtime: `mcr.microsoft.com/dotnet/aspnet:<version>-windowsservercore-ltsc2019`
+- .NET SDK (build): `mcr.microsoft.com/dotnet/sdk:<version>-windowsservercore-ltsc2019`
+- Node/Next.js on Windows: `mcr.microsoft.com/windows/servercore:ltsc2019` (with Node installed) or a Node-on-Windows image
+
+### Dev / CI (Linux containers)
+- Equivalent Dockerfiles can target Linux bases for faster local builds/CI
+- CI builds → push to registry → deploy to production (Windows containers)
+
+> Note: Windows Server 2019 runs **Windows containers only**. Linux images will not run there.
+
+---
+
+## Configuration
+
+Typical environment variables:
+
+```bash
+# API (kqapi)
+ASPNETCORE_ENVIRONMENT=Production
+KQ_CONNECTION_STRING="Server=localhost;Database=KQ;User ID=kqapp;Password=***;TrustServerCertificate=True;"
+
+# Next.js (kq-reg-web-next)
+NEXT_PUBLIC_API_BASE_URL=https://xxx.example.com
+```
 <h3>📸 Screenshots:</h3>
 
 <img src="https://raw.githubusercontent.com/RamiIssa1974/KQMunicipality/master/ScreenShots/LoginPage.jpg" width="620" height="320" alt="Login Page">
