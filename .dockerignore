@@ -1,0 +1,29 @@
+# git / editors / OS
+.git
+.gitignore
+.gitattributes
+.github
+.vscode
+.vs
+.idea
+Thumbs.db
+
+# node / frontend
+kq-reg-web-next/node_modules
+kq-reg-web-next/.next
+kq-reg-web-next/.turbo
+kq-reg-web-next/.pnpm-store
+kq-reg-web-next/npm-debug.log
+kq-reg-web-next/yarn-error.log
+kq-reg-web-next/pnpm-lock.yaml
+kq-reg-web-next/package-lock.json
+
+# dotnet build outputs
+**/bin
+**/obj
+**/*.user
+**/*.suo
+
+# env / secrets
+.env
+**/*.env

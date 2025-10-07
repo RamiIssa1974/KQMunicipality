@@ -1,4 +1,5 @@
 ﻿import { Student } from "@/types/Student";
+import { API_BASE } from '../services/config';
 
 export const searchStudent = async (
     id: string,
@@ -6,7 +7,7 @@ export const searchStudent = async (
     year: number
 ): Promise<Student | null> => {
     try {
-        const apiUrl = `https://localhost:7032/api/Schools/students/${id}/${birthDate}/${year}`;
+        const apiUrl = `/api/Schools/students/${id}/${birthDate}/${year}`;
 
         const response = await fetch(apiUrl, {
             method: "GET",

@@ -87,7 +87,7 @@ export default function RegisterPage() {
         <div className="register-page-container">
             {/* Header */}
             <div className="header-info-section">
-                <img src="/Images/kq-kidsgirl.png" alt="Kid Left" className="header-image" />
+                <img src="/Images/kq-KidsGirl.png" alt="Kid Left" className="header-image" />
 
                 <div className="header-text-section">
                     <p className="header-line"><strong>תעודת זהות / رقم هوية الطالب:</strong></p>
@@ -97,7 +97,7 @@ export default function RegisterPage() {
                     <p className="header-line">{studentBirthDate}</p>
                 </div>
 
-                <img src="/Images/kq-kidsboy.png" alt="Kid Right" className="header-image" />
+                <img src="/Images/kq-KidsBoy.png" alt="Kid Right" className="header-image" />
             </div>
 
             <hr />

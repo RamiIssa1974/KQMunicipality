@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "lIvVnTf60wDhJ5w1Hn5R4I5OJT0wA9Rw/sZdX8nLcMU=",
-  "Source": "KQApi",
-  "BasePath": "_content/KQApi",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"lIvVnTf60wDhJ5w1Hn5R4I5OJT0wA9Rw/sZdX8nLcMU=","Source":"KQApi","BasePath":"_content/KQApi","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

@@ -123,7 +123,8 @@ namespace KQApi.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Reason")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("Registration_type_ID")
                         .IsRequired()
@@ -180,6 +181,9 @@ namespace KQApi.Migrations
                     b.Property<DateTime>("Modified")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("NumberOfRegisteredStudents")
+                        .HasColumnType("int");
+
                     b.Property<string>("Registration_Type")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -197,7 +201,7 @@ namespace KQApi.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Teachers");
+                    b.ToTable("VTeachers");
                 });
 #pragma warning restore 612, 618
         }

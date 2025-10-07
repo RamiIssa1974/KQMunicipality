@@ -1,0 +1,41 @@
+﻿@using KQRegistrationWeb.ViewModels
+@model RegisterDetailsVm
+<div class="registration-message centered text-green m-40 fs-x-large">
+    @Model.RegistrationMessage
+</div>
+<div class="row reg-details-kid">
+    <div class="col-1">
+        <img class="kids" src="/images/kq-KidsBoy.png" />
+    </div>
+    <div class="col-10">
+        <div class="mt-30">
+            <label class="data-label">ת.ז./رقم الهوية:</label>
+            <label class="data-label-info">@Model.StudentIDN</label>
+        </div>
+        <div class="mt-30">
+            <label class="data-label">תאריך לידה/تاريخ الميلاد الطالب:</label>
+            <label class="data-label-info">@Model.StudentBirthDate</label>
+        </div>
+        <div class="mt-30">
+            <img src="/images/kq-school-icon.png" width="35" />
+            <label class="data-label">בית ספר/المدرسه:</label>
+            <label class="data-label-info">@Model.SchoolName</label>
+        </div>
+        <div class="mt-30">
+            <img src="/images/kq-teacher-icon.png" width="35" />
+            <label class="data-label">מנהלת/االمعلمه:</label>
+            <label class="data-label-info">@Model.TeacherName</label>
+        </div>
+    </div>
+    <div class="col-1">
+        <img class="kids" src="/images/kq-KidsGirl.png" />
+    </div>
+</div>
+@if (Model.Confirm)
+{
+    <div class="row reg-details-confirm">
+        <img src="~/images/confirm.png" />
+    </div>
+}
+
+

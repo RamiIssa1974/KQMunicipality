@@ -19,10 +19,7 @@ const Header = () => {
                 {/* Title */}
                 <Link href="/HomePage" className="header-title">
                     نافذة تسجيل الطلاب
-                </Link>
-                <Link href="/Test" className="header-title">
-                    Test
-                </Link>
+                </Link>               
                 {/* Right Logo */}
                 <Image
                     src="/Images/right-logo.png"

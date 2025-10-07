@@ -1,0 +1,57 @@
+services:
+  kqsql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: kq-sql
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=${SA_PASSWORD}
+    ports:
+      - "14333:1433"
+    volumes:
+      - kq_mssql_data:/var/opt/mssql
+      - ./sql-backups:/var/opt/mssql/backup
+    
+  kqapi:
+    build:
+      context: .             
+      dockerfile: KQRegistration/Dockerfile
+    container_name: kq-api
+    environment:      
+        ASPNETCORE_ENVIRONMENT: "Development"
+        ConnectionStrings__CityInfoDBConnectionString: "Server=kqsql;Database=KQRegistrationDb;User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True;Encrypt=False"
+    depends_on:
+      - kqsql
+    ports:
+      - "8080:8080"
+  
+  kqwebnext:
+    build:
+      context: ./kq-reg-web-next
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_BASE: "http://kq-api:8080"
+    container_name: kq-web-next
+    environment:
+      # if your Next app reads API base from env, expose it here (adjust the name your code expects):
+      NEXT_PUBLIC_API_BASE: "http://kq-api:8080"
+    depends_on:
+      - kqapi
+    ports:
+      - "3000:3000"
+
+  kqwebmvc:
+    build:
+      context: .
+      dockerfile: KQRegistrationWeb/Dockerfile
+    container_name: kq-web-mvc
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"      
+      ConnectionStrings__CityInfoDBConnectionString: "Server=kqsql;Database=KQRegistrationDb;User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True;Encrypt=False"      
+      ApiBaseUrl: "http://kq-api:8080"
+    depends_on:
+      - kqapi
+    ports:
+      - "8081:8081"
+
+volumes:
+  kq_mssql_data:

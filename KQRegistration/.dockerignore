@@ -1,0 +1,14 @@
+**/.classpath
+**/.dockerignore
+**/.env
+**/.git
+**/.gitignore
+**/.idea
+**/.vs
+**/.vscode
+**/*.*proj.user
+**/bin
+**/obj
+**/node_modules
+**/npm-debug.log
+**/yarn-error.log

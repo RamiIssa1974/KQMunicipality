@@ -7,9 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KQApi", "KQApi.csproj", "{7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KQGeneral", "..\KQGeneral\KQGeneral.csproj", "{9D43261A-5E36-443F-98F0-36DBFC94C743}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KQRegistrationWeb", "..\KQRegistratrationWeb\KQRegistrationWeb.csproj", "{B3EE4CBB-C7C5-4C25-B54F-7342A6B012BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KQRegistrationWeb", "..\KQRegistrationWeb\KQRegistrationWeb.csproj", "{B3EE4CBB-C7C5-4C25-B54F-7342A6B012BC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kq-reg-web-next", "..\kq-reg-web-next\kq-reg-web-next.csproj", "{E2E26F42-019E-4618-905E-C3F0A9351087}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		..\sql-backups\KQRegistration_2025_10_04.bak = ..\sql-backups\KQRegistration_2025_10_04.bak
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

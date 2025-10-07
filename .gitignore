@@ -9,7 +9,7 @@ assets/
 packages/
 *.log
 *.zip
-
+.env
 # dependencies
 KQRegistratrationWeb/.vs/
 KQRegistratrationWeb/bin/

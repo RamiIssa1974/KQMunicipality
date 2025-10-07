@@ -89,7 +89,7 @@ export default function LoginPage() {
             </header>
 
             <div className="login-main-container">
-                <img src="/Images/kq-kidsgirl.png" alt="Kid Left" className="login-image login-image-left" />
+                <img src="/Images/kq-KidsGirl.png" alt="Kid Left" className="login-image login-image-left" />
 
                 <div className="login-form-container">
 
@@ -124,7 +124,7 @@ export default function LoginPage() {
                     </button>
                 </div>
 
-                <img src="/Images/kq-kidsboy.png" alt="Kid Right" className="login-image login-image-right" />
+                <img src="/Images/kq-KidsBoy.png" alt="Kid Right" className="login-image login-image-right" />
             </div>
         </div>
     );

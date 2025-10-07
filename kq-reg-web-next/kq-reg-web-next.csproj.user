@@ -23,15 +23,6 @@
     <None Update="src\app\services\studentService.ts">
       <SubType>Code</SubType>
     </None>
-    <None Update="src\app\Test\medicalRecords.tsx">
-      <SubType>Code</SubType>
-    </None>
-    <None Update="src\app\Test\Records.tsx">
-      <SubType>Code</SubType>
-    </None>
-    <None Update="src\app\Test\wordEmitter.tsx">
-      <SubType>Code</SubType>
-    </None>
     <None Update="src\types\index.ts">
       <SubType>Code</SubType>
     </None>

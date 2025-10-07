@@ -7,7 +7,7 @@
         "Action": "Start"
       },
       {
-        "Path": "..\\KQRegistratrationWeb\\KQRegistrationWeb.csproj",
+        "Path": "..\\KQRegistrationWeb\\KQRegistrationWeb.csproj",
         "Action": "Start"
       }
     ]

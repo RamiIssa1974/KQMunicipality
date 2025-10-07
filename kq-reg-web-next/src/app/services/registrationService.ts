@@ -1,8 +1,10 @@
 ﻿"use client";
 import { StudentRequest } from "@/types";
+import { API_BASE } from '../services/config';
+
 export const submitRejection = async (studentRequest: StudentRequest) => {
     try {
-        const response = await fetch("https://localhost:7032/api/Schools/students", {
+        const response = await fetch(`/api/Schools/students`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(studentRequest)
@@ -26,7 +28,7 @@ export const submitRejection = async (studentRequest: StudentRequest) => {
 
 export const getSchools = async () => {
     try {
-        const response = await fetch("https://localhost:7032/api/Schools");
+        const response = await fetch(`/api/Schools`);
         if (!response.ok) {
             throw new Error("Failed to fetch schools");
         }
@@ -38,7 +40,7 @@ export const getSchools = async () => {
 };
 export const getTeachers = async (schoolId: string, year: number, registrationType: number) => {
     try {
-        const response = await fetch(`https://localhost:7032/api/Schools/teachers/${schoolId}/${year}/${registrationType}`);
+        const response = await fetch(`/api/Schools/teachers/${schoolId}/${year}/${registrationType}`);
         if (!response.ok) {
             throw new Error("Failed to fetch teachers");
         }
@@ -51,7 +53,7 @@ export const getTeachers = async (schoolId: string, year: number, registrationTy
 
 export const submitRegistration = async (requestData: any) => {
     try {
-        const response = await fetch("https://localhost:7032/api/Schools/students", {
+        const response = await fetch(`/api/Schools/students`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -74,7 +76,7 @@ export const submitRegistration = async (requestData: any) => {
 
 export const getRegistrationTypes = async () => {
     try {
-        const apiUrl = "https://localhost:7032/api/schools/RegistrationTypes"; // ✅ FIXED
+        const apiUrl = `/api/schools/RegistrationTypes`;  
 
         console.log(`Fetching registration types from: ${apiUrl}`);
 
